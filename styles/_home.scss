@@ -2,6 +2,9 @@
   font-family: "Noto Sans TC", sans-serif;
   text-decoration: none;
 }
+:root {
+  --swiper-theme-color: #ffd153;
+}
 
 body {
   .home-container {
@@ -9,6 +12,7 @@ body {
     margin: 0 auto;
     max-width: 1366px;
     overflow: hidden;
+    // overflow: hidden;
     //首頁背景圖案
     .home-bg {
       position: absolute;
@@ -48,35 +52,16 @@ body {
       z-index: -10;
     }
     //導覽列
-    .main-nav {
-      height: 88px;
-      padding: 24px 139px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .logo {
-        width: 218px;
-        height: 40px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
+    nav {
+      @include navbar;
+
       button {
-        padding: 8px 32px;
-        background-color: $price-btn;
-        color: #fff;
-        border: none;
-        border-radius: 22px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        &:hover {
-          background-color: $price-btn-hover;
-        }
-        a {
-          color: #fff;
-        }
+        @include navbar-price-btn;
       }
+    }
+    .scroll {
+      background: #fff;
+      border-bottom: #ffd153 2px solid;
     }
     //首頁
     .intro {
@@ -161,9 +146,11 @@ body {
         font-size: $font-sm;
         margin-bottom: 48px;
       }
-      .characters {
+      .roles-container {
         display: flex;
-        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
         z-index: 10;
         .role-card {
           max-width: 24%;
@@ -192,6 +179,7 @@ body {
     .features {
       width: 80%;
       display: flex;
+      flex-wrap: wrap;
       margin-top: 100px;
       margin-left: auto;
       margin-right: auto;
@@ -199,7 +187,8 @@ body {
         display: flex;
         flex-wrap: wrap;
         gap: 47px;
-        max-width: 50%;
+        width: 50%;
+        margin: 0 auto;
         .feature-card {
           width: 200px;
           height: 280px;
@@ -258,6 +247,8 @@ body {
       margin-top: 100px;
       margin-left: auto;
       margin-right: auto;
+      overflow: hidden;
+
       h2 {
         text-align: center;
         font-size: $font-l;
@@ -305,6 +296,15 @@ body {
               padding-bottom: 24px;
             }
           }
+        }
+        //swiper 分頁設定
+        .swiper-pagination-bullet-active {
+          width: 20px;
+          border-radius: 8px;
+        }
+        .swiper-pagination {
+          position: static;
+          margin-top: 24px;
         }
       }
     }

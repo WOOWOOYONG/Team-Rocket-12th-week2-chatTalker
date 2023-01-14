@@ -1,4 +1,20 @@
 //pricing-btn
+
+@mixin navbar-price-btn {
+  font-size: 16px;
+  font-weight: $font-light;
+  padding: 8px 32px;
+  background-color: $price-btn;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $price-btn-hover;
+  }
+}
+
 @mixin users-btn-solid {
   background-color: $theme-color;
   color: #fff;
@@ -9,6 +25,10 @@
   border: 1px solid $theme-color;
   cursor: pointer;
   white-space: nowrap;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $pric-btn-hover2;
+  }
 }
 
 @mixin users-btn-hollow {
@@ -21,4 +41,9 @@
   border: 1px solid $theme-color;
   cursor: pointer;
   white-space: nowrap;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $theme-color;
+    color: #fff;
+  }
 }

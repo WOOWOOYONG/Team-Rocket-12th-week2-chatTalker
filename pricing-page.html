@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chatTalker-方案說明</title>
     <link rel="stylesheet" href="./styles/all.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    ></script>
+    <script defer src="all.js"></script>
   </head>
   <body>
     <div class="pricing-container">
@@ -13,9 +18,9 @@
         <!--背景圖片-->
         <div class="price-bg"></div>
         <div class="banner-bg"></div>
-        <nav class="main-nav">
+        <nav>
           <div class="logo">
-            <a href="./index.html">
+            <a href="index.html">
               <img src="./chatTalker_images/logo.png" alt="logo"
             /></a>
           </div>
@@ -32,7 +37,7 @@
           <div class="price-plan">
             <h3>彈性選擇，提供您選擇最適合的方案</h3>
             <div class="users">
-              <button>10000位</button>
+              <button class="active">10000位</button>
               <button>15000位</button>
               <button>20000位</button>
               <button>25000位</button>
@@ -119,13 +124,34 @@
         </section>
         <!--常見問題-->
         <section>
-          <h3>常見問題</h3>
           <div class="questions">
+            <h3>常見問題</h3>
             <div class="question">
-              <button>
-                <p>我要怎麼變更方案？</p>
-                <img src="./chatTalker_images/icon_plus.svg" alt="" />
-              </button>
+              <div class="question-item">
+                <button>
+                  <p>我要怎麼變更方案？</p>
+                </button>
+                <div class="answer">
+                  請聯絡您的業務專員修改訂閱方案，我們將為您進行變更流程。
+                </div>
+              </div>
+              <div class="question-item">
+                <button>
+                  <p>如果我沒有LINE官方帳號怎麼辦？</p>
+                </button>
+                <div class="answer">
+                  沒關係的，只要您是我們任何一個方案的夥伴，我們的專員可以協助辦理哦！
+                </div>
+              </div>
+              <div class="question-item">
+                <button>
+                  <p>非上班日有客服支援嗎？</p>
+                </button>
+                <div class="answer">
+                  當然哦！我們錢都收了，不會拋棄你的！ <br />
+                  請您直接來我們公司，我們假日也都在辦公室。
+                </div>
+              </div>
             </div>
           </div>
         </section>

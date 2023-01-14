@@ -139,6 +139,10 @@ table {
   text-decoration: none;
 }
 
+:root {
+  --swiper-theme-color: #ffd153;
+}
+
 body .home-container {
   position: relative;
   margin: 0 auto;
@@ -181,22 +185,28 @@ body .home-container .bg-ball-3 {
   left: 50px;
   z-index: -10;
 }
-body .home-container .main-nav {
+body .home-container nav {
   height: 88px;
-  padding: 24px 139px;
+  padding: 0 139px;
+  position: absolute;
+  top: 0;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
-body .home-container .main-nav .logo {
+body .home-container nav .logo {
   width: 218px;
   height: 40px;
 }
-body .home-container .main-nav .logo img {
+body .home-container nav .logo img {
   width: 100%;
   height: 100%;
 }
-body .home-container .main-nav button {
+body .home-container nav button {
+  font-size: 16px;
+  font-weight: 300;
   padding: 8px 32px;
   background-color: #ff5d50;
   color: #fff;
@@ -205,11 +215,12 @@ body .home-container .main-nav button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-body .home-container .main-nav button:hover {
+body .home-container nav button:hover {
   background-color: #c71508;
 }
-body .home-container .main-nav button a {
-  color: #fff;
+body .home-container .scroll {
+  background: #fff;
+  border-bottom: #ffd153 2px solid;
 }
 body .home-container .intro {
   display: flex;
@@ -288,35 +299,38 @@ body .home-container .roles p {
   font-size: 20px;
   margin-bottom: 48px;
 }
-body .home-container .roles .characters {
+body .home-container .roles .roles-container {
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
   z-index: 10;
 }
-body .home-container .roles .characters .role-card {
+body .home-container .roles .roles-container .role-card {
   max-width: 24%;
   border-radius: 12px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
   background-color: #fff;
 }
-body .home-container .roles .characters .role-card img {
+body .home-container .roles .roles-container .role-card img {
   width: 100%;
   border-radius: 12px 12px 0 0;
   margin-bottom: 16px;
 }
-body .home-container .roles .characters .role-card h5 {
+body .home-container .roles .roles-container .role-card h5 {
   font-size: 16px;
   font-weight: 500;
   color: #56c4c5;
   margin-bottom: 20px;
 }
-body .home-container .roles .characters .role-card p {
+body .home-container .roles .roles-container .role-card p {
   font-size: 16px;
   line-height: 1.5rem;
 }
 body .home-container .features {
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -325,7 +339,8 @@ body .home-container .features .features-container {
   display: flex;
   flex-wrap: wrap;
   gap: 47px;
-  max-width: 50%;
+  width: 50%;
+  margin: 0 auto;
 }
 body .home-container .features .features-container .feature-card {
   width: 200px;
@@ -382,6 +397,7 @@ body .home-container .users {
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 body .home-container .users h2 {
   text-align: center;
@@ -432,6 +448,14 @@ body .home-container .users .user-container .user-card .user-data .user-info {
   align-items: center;
   padding-bottom: 24px;
 }
+body .home-container .users .user-container .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 8px;
+}
+body .home-container .users .user-container .swiper-pagination {
+  position: static;
+  margin-top: 24px;
+}
 body .home-container footer {
   margin-top: 100px;
   height: 503px;
@@ -480,7 +504,7 @@ body {
   text-decoration: none;
 }
 body .pricing-container {
-  max-width: 1358px;
+  max-width: 1366px;
   margin: 0 auto;
   position: relative;
 }
@@ -499,25 +523,28 @@ body .pricing-container header .banner-bg {
   top: 0;
   left: 481px;
 }
-body .pricing-container header .main-nav {
+body .pricing-container header nav {
   height: 88px;
-  padding: 24px 139px;
-  width: 85%;
+  padding: 0 139px;
   position: absolute;
   top: 0;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
-body .pricing-container header .main-nav .logo {
+body .pricing-container header nav .logo {
   width: 218px;
   height: 40px;
 }
-body .pricing-container header .main-nav .logo img {
+body .pricing-container header nav .logo img {
   width: 100%;
   height: 100%;
 }
-body .pricing-container header .main-nav button {
+body .pricing-container header nav button {
+  font-size: 16px;
+  font-weight: 300;
   padding: 8px 32px;
   background-color: #ff5d50;
   color: #fff;
@@ -526,7 +553,7 @@ body .pricing-container header .main-nav button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-body .pricing-container header .main-nav button:hover {
+body .pricing-container header nav button:hover {
   background-color: #c71508;
 }
 body .pricing-container header .banner-txt {
@@ -571,6 +598,15 @@ body .pricing-container main .price-plan .users button {
   border: 1px solid #56c4c5;
   cursor: pointer;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+body .pricing-container main .price-plan .users button:hover {
+  background-color: #56c4c5;
+  color: #fff;
+}
+body .pricing-container main .price-plan .users .active {
+  background-color: #56c4c5;
+  color: #fff;
 }
 body .pricing-container main .price-plan .plan-container {
   max-width: 90%;
@@ -592,6 +628,10 @@ body .pricing-container main .price-plan .plan-container button {
   border: 1px solid #56c4c5;
   cursor: pointer;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+body .pricing-container main .price-plan .plan-container button:hover {
+  background-color: #209193;
 }
 body .pricing-container main .price-plan .plan-container .plan-card {
   width: 60%;
@@ -663,4 +703,70 @@ body .pricing-container main .price-plan .plan-container .monthly .info-card .in
 body .pricing-container main .price-plan .plan-container h4 {
   margin: 33px 21px;
   font-size: 29px;
+}
+body .pricing-container main .questions {
+  max-width: 70%;
+  margin-top: 100px;
+  margin: 100px auto;
+}
+body .pricing-container main .questions h3 {
+  text-align: center;
+  margin-bottom: 48px;
+  font-size: 32px;
+  font-weight: 500;
+}
+body .pricing-container main .questions .question-item button {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 12px;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 32px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+body .pricing-container main .questions .question-item button::after {
+  content: url("/chatTalker_images/icon_plus.svg");
+  position: absolute;
+  right: 32px;
+}
+body .pricing-container main .questions .question-item button p {
+  font-size: 18px;
+}
+body .pricing-container main .questions .question-item .answer {
+  display: none;
+  color: #747474;
+  text-align: left;
+  line-height: 1.8rem;
+  padding: 24px 32px;
+}
+body .pricing-container main .questions .question-item-show {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+body .pricing-container main .questions .question-item-show button {
+  margin-bottom: 0;
+  box-shadow: none;
+}
+body .pricing-container main .questions .question-item-show button::after {
+  content: url("/chatTalker_images/icon_minus.svg");
+  position: absolute;
+  right: 32px;
+}
+body .pricing-container main .questions .question-item-show .answer {
+  display: block;
+}
+body .pricing-container footer .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  height: 56px;
 }/*# sourceMappingURL=all.css.map */
