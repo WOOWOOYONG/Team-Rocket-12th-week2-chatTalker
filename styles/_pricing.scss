@@ -1,0 +1,182 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  text-decoration: none;
+
+  .pricing-container {
+    max-width: 1358px;
+    margin: 0 auto;
+    position: relative;
+    header {
+      //banner背景
+      .price-bg {
+        background: #f7f9fd 0% 0% no-repeat padding-box;
+        border-radius: 0px 0px 0px 300px;
+        width: 100%;
+        height: 470px;
+        z-index: -10;
+      }
+      .banner-bg {
+        background: url("/chatTalker_images/banner.svg") right no-repeat;
+        width: 65%;
+        height: 559px;
+        position: absolute;
+        top: 0;
+        left: 481px;
+      }
+      .main-nav {
+        height: 88px;
+        padding: 24px 139px;
+        width: 85%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+          width: 218px;
+          height: 40px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        button {
+          padding: 8px 32px;
+          background-color: $price-btn;
+          color: #fff;
+          border: none;
+          border-radius: 22px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            background-color: $price-btn-hover;
+          }
+        }
+      }
+      .banner-txt {
+        position: absolute;
+        top: 180px;
+        left: 139px;
+        width: 30%;
+        height: 70px;
+        text-align: left;
+        h2 {
+          font-size: $font-xl;
+          font-weight: $font-bold;
+          margin-bottom: 24px;
+        }
+      }
+    }
+    main {
+      margin-top: 100px;
+      .price-plan {
+        max-width: 70%;
+        margin: 0 auto;
+        h3 {
+          text-align: center;
+          font-size: $font-l;
+          font-weight: $font-bold;
+          margin-bottom: 48px;
+        }
+        .users {
+          display: flex;
+          justify-content: center;
+          gap: 16px;
+          margin-bottom: 54px;
+          button {
+            @include users-btn-hollow;
+          }
+        }
+
+        .plan-container {
+          max-width: 90%;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-around;
+          gap: 16px;
+          h3 {
+            font-size: $font-m;
+          }
+          button {
+            @include users-btn-solid;
+          }
+          .plan-card {
+            width: 60%;
+            box-shadow: 0px 2px 10px #00000014;
+            border-radius: 12px;
+            position: relative;
+            .plan-content {
+              padding: 10px 29px 32px 29px;
+
+              ul {
+                margin-bottom: 32px;
+                li {
+                  margin-bottom: 16px;
+                  img {
+                    margin-right: 16px;
+                  }
+                }
+              }
+              button {
+                display: block;
+                margin: 0 auto;
+              }
+            }
+          }
+          h3 {
+            padding-top: 15px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #dddddd;
+            margin-bottom: 32px;
+          }
+          p {
+            text-align: center;
+            line-height: 1.6rem;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 32px;
+          }
+          .monthly {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 32px;
+            .info-card {
+              width: 169px;
+              height: 108px;
+              background: #f5f5f5 0% 0% no-repeat padding-box;
+              border-radius: 12px;
+              text-align: center;
+              padding: 0 2px;
+              p {
+                font-size: 12px;
+                margin-bottom: 6px;
+                padding-top: 16px;
+              }
+              div {
+                font-size: $font-l;
+                padding-bottom: 24px;
+
+                span {
+                  font-size: 12px;
+                  margin-left: 8px;
+                  font-weight: $font-bold;
+                }
+              }
+              .info-card-txt {
+                color: $theme-color;
+              }
+            }
+          }
+          h4 {
+            margin: 33px 21px;
+            font-size: 29px;
+          }
+        }
+      }
+      .questions {
+      }
+    }
+  }
+}

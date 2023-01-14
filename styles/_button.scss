@@ -1,0 +1,24 @@
+//pricing-btn
+@mixin users-btn-solid {
+  background-color: $theme-color;
+  color: #fff;
+  padding: 12px 32px;
+  font-size: $font-s;
+  font-weight: $font-light;
+  border-radius: 27px;
+  border: 1px solid $theme-color;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@mixin users-btn-hollow {
+  background-color: #fff;
+  color: $theme-color;
+  padding: 12px 32px;
+  font-size: $font-s;
+  font-weight: $font-light;
+  border-radius: 27px;
+  border: 1px solid $theme-color;
+  cursor: pointer;
+  white-space: nowrap;
+}
