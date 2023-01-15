@@ -26,7 +26,7 @@ function initSwiper() {
       },
     },
     /* 卡片元素的間隔 */
-    spaceBetween: 16,
+    spaceBetween: 18,
     pagination: {
       /* 我想將分頁圓點綁在哪個 class */
       el: ".swiper-pagination",
@@ -38,11 +38,21 @@ function initSwiper() {
 
 initSwiper();
 
-//常見問題
+//Q&A toggle
 const questions = document.querySelectorAll(".question-item");
 
 questions.forEach((item) => {
   item.addEventListener("click", () => {
     item.classList.toggle("question-item-show");
   });
+});
+
+//fixed navbar
+const nav = document.querySelector("nav");
+window.addEventListener("scroll", () => {
+  if (this.scrollY <= 10) {
+    nav.classList.remove("fixed");
+  } else {
+    nav.classList.add("fixed");
+  }
 });

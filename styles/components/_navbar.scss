@@ -1,13 +1,14 @@
 @mixin navbar {
-  height: 88px;
-  padding: 0 139px;
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: 80%;
+  max-width: 1200px;
+  z-index: 100;
+  padding: 24px 83px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  transition: all 0.2s ease;
   .logo {
     width: 218px;
     height: 40px;

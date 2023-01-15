@@ -1,4 +1,6 @@
 //font-size
+$font-xxs: 12px;
+$font-xs: 16px;
 $font-s: 18px;
 $font-sm: 20px;
 $font-m: 24px;
@@ -15,3 +17,8 @@ $theme-color: #56c4c5;
 $price-btn: #ff5d50;
 $price-btn-hover: #c71508;
 $pric-btn-hover2: #209193;
+
+//swiper color
+:root {
+  --swiper-theme-color: #ffd153;
+}

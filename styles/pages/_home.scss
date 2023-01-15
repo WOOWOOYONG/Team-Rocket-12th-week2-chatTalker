@@ -1,0 +1,521 @@
+* {
+  font-family: "Noto Sans TC", sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  .home-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1366px;
+    overflow: hidden;
+    //首頁背景圖片
+    .home-bg {
+      background: url("/chatTalker_images/bg_home.svg") no-repeat;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 62%;
+      height: 768px;
+      z-index: -5;
+      @include Mobile {
+        display: none;
+      }
+    }
+    .home-bg-sm {
+      background: url("/chatTalker_images/bg_home_sm.svg") no-repeat;
+      position: absolute;
+      top: 450px;
+      left: 20px;
+      width: 334px;
+      height: 245px;
+      z-index: -6;
+      display: none;
+      @include Mobile {
+        display: block;
+      }
+    }
+    .bg-ball-1 {
+      background: url("/chatTalker_images/ball01.svg") right no-repeat;
+      width: 138px;
+      height: 380px;
+      position: absolute;
+      top: 589px;
+      @include Mobile {
+        top: 743px;
+        left: -77px;
+        width: 126px;
+        height: 126px;
+      }
+    }
+    .bg-ball-2 {
+      background: url("/chatTalker_images/ball02.svg");
+      background-size: cover;
+      overflow: hidden;
+      width: 310px;
+      height: 310px;
+      position: absolute;
+      z-index: -10;
+      top: 1880px;
+      left: 1156px;
+      @include Mobile {
+        top: 3400px;
+        left: 287px;
+        width: 135px;
+        height: 135px;
+      }
+    }
+    .bg-ball-3 {
+      background: url("/chatTalker_images/ball03.svg");
+      background-size: cover;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 2630px;
+      left: 50px;
+      z-index: -10;
+      @include Mobile {
+        top: 5180px;
+        left: -76px;
+        width: 153px;
+        height: 153px;
+      }
+    }
+    //回到最上面按鈕
+    .goTop {
+      @include goTop-btn;
+      @include Mobile {
+        width: 50px;
+        height: 50px;
+        right: 16px;
+        font-size: 14px;
+      }
+    }
+    //導覽列
+
+    nav {
+      @include navbar;
+      @include Mobile {
+        width: 390px;
+        height: 72px;
+        padding: 2px 8px;
+        justify-content: space-around;
+        background: #fff;
+        border-bottom: #ffd153 2px solid;
+      }
+      .logo {
+        @include Mobile {
+          width: 130px;
+          height: 24px;
+        }
+      }
+      a {
+        button {
+          @include navbar-price-btn;
+          @include Mobile {
+            width: 128px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .fixed {
+      background: #fff;
+      border-bottom: #ffd153 2px solid;
+      max-width: 1200px;
+    }
+
+    //首頁-banner
+    .home-banner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 100px 120px 120px 141px;
+      @include PC {
+        width: 100%;
+      }
+      @include Mobile {
+        margin: 100px auto 80px auto;
+      }
+
+      .banner-txt {
+        padding-top: 150px;
+        @include Large {
+        }
+        @include PC {
+          width: 100%;
+          margin-bottom: 100px;
+        }
+        @include Mobile {
+          padding: 0 20px;
+          margin-bottom: 50px;
+        }
+        h3 {
+          color: $theme-color;
+          font-size: $font-s;
+          font-weight: $font-bold;
+          margin-bottom: 8px;
+          @include Mobile {
+            font-size: $font-xs;
+          }
+        }
+        h2 {
+          font-size: $font-xl;
+          font-weight: $font-bolder;
+          @include Mobile {
+            font-size: $font-l;
+          }
+        }
+        p {
+          font-size: $font-sm;
+          font-weight: $font-light;
+          margin-top: 16px;
+          @include Mobile {
+            font-size: $font-xs;
+          }
+        }
+      }
+      .banner-image {
+        width: 532px;
+        height: auto;
+        @include Large {
+          max-width: 390px;
+        }
+        @include Mobile {
+          max-width: 300px;
+          height: 305px;
+          margin: 0 auto;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+    //平台
+    .platform {
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+      h3 {
+        font-size: $font-l;
+        font-weight: $font-bolder;
+        margin-bottom: 60px;
+        @include Mobile {
+          font-size: 28px;
+        }
+      }
+      .platform-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 126px;
+        @include Mobile {
+          gap: 24px;
+        }
+        .card {
+          width: 244px;
+          height: 221px;
+          img {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 24px;
+            @include Mobile {
+              width: 60px;
+              height: 60px;
+            }
+          }
+          h4 {
+            font-size: $font-m;
+            font-weight: $font-bold;
+            margin-bottom: 24px;
+            @include Mobile {
+              font-size: $font-s;
+            }
+          }
+          p {
+            color: gray;
+            @include Mobile {
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+    }
+    //服務對象
+    .roles {
+      margin-top: 100px;
+      h3 {
+        font-size: $font-l;
+        margin-bottom: 20px;
+        @include Mobile {
+          font-size: 28px;
+        }
+      }
+      p {
+        font-size: $font-sm;
+        margin-bottom: 48px;
+        @include Mobile {
+          font-size: $font-s;
+        }
+      }
+      .roles-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        z-index: 10;
+        @include Mobile {
+          gap: 24px;
+        }
+        .role-card {
+          max-width: 260px;
+          border-radius: 12px;
+          box-shadow: 0px 2px 10px #00000014;
+          background-color: #fff;
+
+          img {
+            width: 100%;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 16px;
+          }
+          h5 {
+            font-size: $font-xs;
+            font-weight: $font-bold;
+            color: $theme-color;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: $font-xs;
+            @include Mobile {
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+    }
+    //特色功能
+    .features {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap-reverse;
+      margin: 100px auto 0 auto;
+      @include Mobile {
+        margin-top: 60px;
+      }
+      .features-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        width: 50%;
+        margin: 0 auto;
+        @include Large {
+          width: 70%;
+        }
+        @include Mobile {
+          margin-top: 32px;
+          gap: 24px;
+        }
+        .feature-card {
+          width: 200px;
+          height: 280px;
+          border-radius: 12px;
+          box-shadow: 0px 2px 10px #00000014;
+          padding-left: 32px;
+          @include Large {
+            max-width: 200px;
+          }
+          .feature-image {
+            width: 86px;
+            height: 86px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 10px #00000014;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 26px 0;
+          }
+          h4 {
+            font-size: $font-s;
+            font-weight: $font-bolder;
+            margin-bottom: 16px;
+          }
+        }
+      }
+      .feature-txt {
+        max-width: 50%;
+        margin-top: 165px;
+        margin-right: 188px;
+        @include Large {
+          text-align: left;
+          margin: 100px auto;
+        }
+        @include Mobile {
+          max-width: 100%;
+          margin: 0 20px;
+          text-align: center;
+        }
+        h2 {
+          font-size: $font-l;
+          font-weight: $font-bold;
+          margin-bottom: 16px;
+          @include Mobile {
+            font-size: 28px;
+          }
+        }
+        p {
+          font-size: $font-s;
+          margin-bottom: 24px;
+          @include Mobile {
+            font-size: $font-xs;
+            line-height: 1.6;
+          }
+        }
+        button {
+          @include main-price-btn;
+        }
+      }
+    }
+    //使用者評價
+    .users {
+      max-width: 80%;
+      margin: 100px auto;
+      overflow: hidden;
+      @include Mobile {
+        margin-top: 60px;
+        max-width: 90%;
+        overflow: visible;
+      }
+      h2 {
+        text-align: center;
+        font-size: $font-l;
+        font-weight: $font-bolder;
+        margin-bottom: 104px;
+        @include Mobile {
+          font-size: 28px;
+        }
+      }
+      .user-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        .user-card {
+          max-width: 352px;
+          position: relative;
+          border-radius: 12px;
+          box-shadow: 0px 2px 10px #00000014;
+          background-color: #fff;
+          cursor: grab;
+          @include Mobile {
+            // border: 1px solid red;
+          }
+          .user-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            left: 32px;
+            top: -60px;
+          }
+          .user-feedback {
+            padding-top: 48px;
+            margin: 0 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid gray;
+            @include Mobile {
+              margin: 0 16px;
+            }
+          }
+          .user-data {
+            margin: 0 32px;
+            @include Mobile {
+              margin: 0 16px;
+            }
+            h4 {
+              margin-top: 24px;
+              margin-bottom: 24px;
+              font-weight: $font-bold;
+            }
+            .user-info {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-bottom: 24px;
+            }
+          }
+        }
+        //swiper 分頁設定
+        .swiper-pagination-bullet-active {
+          width: 20px;
+          border-radius: 8px;
+        }
+        .swiper-pagination {
+          position: static;
+          margin-top: 24px;
+        }
+      }
+    }
+    //頁尾
+    footer {
+      margin-top: 320px;
+      .footer-bg {
+        position: absolute;
+        height: 540px;
+        bottom: 0;
+        z-index: -5;
+        img {
+          width: 100%;
+        }
+        @include Mobile {
+          display: none;
+        }
+      }
+      .footer-bg-sm {
+        display: none;
+        position: relative;
+        @include Mobile {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          height: 520px;
+          z-index: -5;
+          img {
+            width: 390px;
+            margin: 0 auto;
+          }
+        }
+      }
+      .footer-txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 80px;
+        @include Mobile {
+          padding-bottom: 50px;
+        }
+        h2 {
+          font-size: $font-l;
+          text-align: center;
+          font-weight: $font-bolder;
+          margin-bottom: 48px;
+          @include Mobile {
+            font-size: $font-m;
+            margin-bottom: 24px;
+          }
+        }
+        button {
+          @include main-price-btn;
+        }
+      }
+      .copyright {
+        @include copyright;
+      }
+    }
+  }
+}
