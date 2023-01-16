@@ -321,7 +321,7 @@ body {
             }
 
             &::after {
-              content: url("/chatTalker_images/icon_plus.svg");
+              content: url("./chatTalker_images/icon_plus.svg");
               position: absolute;
               right: 32px;
               @include Mobile {
@@ -356,7 +356,7 @@ body {
             color: $theme-color;
 
             &::after {
-              content: url("/chatTalker_images/icon_minus.svg");
+              content: url("./chatTalker_images/icon_minus.svg");
               position: absolute;
               right: 32px;
             }

@@ -1241,7 +1241,7 @@ body .pricing-container main .questions .question-item button:hover {
   color: #56c4c5;
 }
 body .pricing-container main .questions .question-item button::after {
-  content: url("/chatTalker_images/icon_plus.svg");
+  content: url("./chatTalker_images/icon_plus.svg");
   position: absolute;
   right: 32px;
 }
@@ -1278,7 +1278,7 @@ body .pricing-container main .questions .question-item-show button {
   color: #56c4c5;
 }
 body .pricing-container main .questions .question-item-show button::after {
-  content: url("/chatTalker_images/icon_minus.svg");
+  content: url("./chatTalker_images/icon_minus.svg");
   position: absolute;
   right: 32px;
 }
