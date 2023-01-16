@@ -13,7 +13,7 @@ body {
     overflow: hidden;
     //首頁背景圖片
     .home-bg {
-      background: url("./chatTalker_images/bg_home.svg") no-repeat;
+      background: url("../chatTalker_images/bg_home.svg") no-repeat;
       position: absolute;
       top: 0;
       right: 0;
@@ -25,7 +25,7 @@ body {
       }
     }
     .home-bg-sm {
-      background: url("./chatTalker_images/bg_home_sm.svg") no-repeat;
+      background: url("../chatTalker_images/bg_home_sm.svg") no-repeat;
       position: absolute;
       top: 400px;
       left: 20px;
