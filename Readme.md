@@ -7,3 +7,4 @@
 3. width,max-width 差別
 4. 設定 overflow: hidden 時機
 5. Scss 檔案分類整理
+6. pseudo-element image 可以用 transform 改變大小
