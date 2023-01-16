@@ -17,7 +17,7 @@ function initSwiper() {
         slidesPerView: 3,
       },
       /* 螢幕寬度大於等於 768px 時切換為 2 欄 */
-      768: {
+      600: {
         slidesPerView: 2,
       },
       /* 更小時都顯示 1 欄 */
@@ -50,7 +50,7 @@ questions.forEach((item) => {
 //fixed navbar
 const nav = document.querySelector("nav");
 window.addEventListener("scroll", () => {
-  if (this.scrollY <= 10) {
+  if (this.scrollY <= 20) {
     nav.classList.remove("fixed");
   } else {
     nav.classList.add("fixed");

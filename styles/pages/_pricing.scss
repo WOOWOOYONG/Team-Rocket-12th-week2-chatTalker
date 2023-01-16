@@ -27,6 +27,7 @@ body {
         }
       }
       nav {
+        max-width: 1346px;
         @include navbar;
         @include Mobile {
           width: 390px;
@@ -55,7 +56,6 @@ body {
       .fixed {
         background: #fff;
         border-bottom: #ffd153 2px solid;
-        max-width: 1200px;
       }
       .price-banner {
         display: flex;
@@ -107,8 +107,15 @@ body {
         }
       }
     }
+    //回到最上面按鈕
     .goTop {
       @include goTop-btn;
+      @include Mobile {
+        width: 50px;
+        height: 50px;
+        right: 16px;
+        font-size: 14px;
+      }
     }
     main {
       margin-top: 400px;
@@ -116,6 +123,9 @@ body {
       .price-plan {
         max-width: 70%;
         margin: 0 auto;
+        @include PC {
+          max-width: 100%;
+        }
         @include Mobile {
           max-width: 100%;
         }
@@ -157,9 +167,11 @@ body {
           max-width: 90%;
           margin: 0 auto;
           display: flex;
-          flex-wrap: wrap;
           justify-content: space-around;
           gap: 16px;
+          @include PC {
+            flex-wrap: wrap;
+          }
           h3 {
             font-size: $font-m;
           }
@@ -230,7 +242,8 @@ body {
               border-radius: 12px;
               text-align: center;
               padding: 0 2px;
-              @include Mobile {
+              @include Pad {
+                height: auto;
               }
               p {
                 font-size: $font-xxs;

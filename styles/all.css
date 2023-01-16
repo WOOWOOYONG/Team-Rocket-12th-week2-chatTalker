@@ -265,12 +265,12 @@ body .home-container .goTop:hover {
   }
 }
 body .home-container nav {
+  max-width: 1346px;
   position: fixed;
   top: 0;
-  max-width: 1200px;
   z-index: 100;
-  padding: 24px 83px;
-  width: 100%;
+  padding: 30px 80px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -324,7 +324,6 @@ body .home-container nav a button:hover {
 body .home-container .fixed {
   background: #fff;
   border-bottom: #ffd153 2px solid;
-  max-width: 1200px;
 }
 body .home-container .home-banner {
   display: flex;
@@ -535,7 +534,7 @@ body .home-container .features {
   flex-wrap: wrap-reverse;
   margin: 100px auto 0 auto;
 }
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   body .home-container .features {
     margin-top: 60px;
   }
@@ -834,12 +833,12 @@ body .pricing-container header .price-bg {
   }
 }
 body .pricing-container header nav {
+  max-width: 1346px;
   position: fixed;
   top: 0;
-  max-width: 1200px;
   z-index: 100;
-  padding: 24px 83px;
-  width: 100%;
+  padding: 30px 80px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -895,7 +894,6 @@ body .pricing-container header nav button:hover {
 body .pricing-container header .fixed {
   background: #fff;
   border-bottom: #ffd153 2px solid;
-  max-width: 1200px;
 }
 body .pricing-container header .price-banner {
   display: flex;
@@ -973,12 +971,25 @@ body .pricing-container .goTop {
 body .pricing-container .goTop:hover {
   background-color: #227475;
 }
+@media (max-width: 390px) {
+  body .pricing-container .goTop {
+    width: 50px;
+    height: 50px;
+    right: 16px;
+    font-size: 14px;
+  }
+}
 body .pricing-container main {
   margin-top: 400px;
 }
 body .pricing-container main .price-plan {
   max-width: 70%;
   margin: 0 auto;
+}
+@media (max-width: 992px) {
+  body .pricing-container main .price-plan {
+    max-width: 100%;
+  }
 }
 @media (max-width: 390px) {
   body .pricing-container main .price-plan {
@@ -1041,9 +1052,13 @@ body .pricing-container main .price-plan .plan-container {
   max-width: 90%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   gap: 16px;
+}
+@media (max-width: 992px) {
+  body .pricing-container main .price-plan .plan-container {
+    flex-wrap: wrap;
+  }
 }
 body .pricing-container main .price-plan .plan-container h3 {
   font-size: 24px;
@@ -1138,6 +1153,11 @@ body .pricing-container main .price-plan .plan-container .monthly .info-card {
   border-radius: 12px;
   text-align: center;
   padding: 0 2px;
+}
+@media (max-width: 768px) {
+  body .pricing-container main .price-plan .plan-container .monthly .info-card {
+    height: auto;
+  }
 }
 body .pricing-container main .price-plan .plan-container .monthly .info-card p {
   font-size: 12px;

@@ -8,3 +8,4 @@
 4. 設定 overflow: hidden 時機
 5. Scss 檔案分類整理
 6. pseudo-element image 可以用 transform 改變大小
+7. navbar 使用 position: fixed 為何會超出頁面寬度

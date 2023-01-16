@@ -97,8 +97,8 @@ body {
       }
     }
     //導覽列
-
     nav {
+      max-width: 1346px;
       @include navbar;
       @include Mobile {
         width: 390px;
@@ -124,10 +124,10 @@ body {
         }
       }
     }
+
     .fixed {
       background: #fff;
       border-bottom: #ffd153 2px solid;
-      max-width: 1200px;
     }
 
     //首頁-banner
@@ -308,7 +308,7 @@ body {
       display: flex;
       flex-wrap: wrap-reverse;
       margin: 100px auto 0 auto;
-      @include Mobile {
+      @include Pad {
         margin-top: 60px;
       }
       .features-container {
