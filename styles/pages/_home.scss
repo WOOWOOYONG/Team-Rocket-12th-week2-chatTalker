@@ -195,7 +195,8 @@ body {
     //平台
     .platform {
       text-align: center;
-      width: 80%;
+      max-width: 1120px;
+      padding: 0 16px;
       margin: 0 auto;
       h3 {
         font-size: $font-l;
