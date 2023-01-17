@@ -72,14 +72,17 @@ body {
         background: url("../chatTalker_images/ball03.svg");
         background-size: cover;
         position: absolute;
-        top: 1360px;
-        left: -108px;
-        width: 204px;
-        height: 204px;
-        z-index: -50;
-        display: none;
+        top: 820px;
+        left: -340px;
+        width: 361px;
+        height: 361px;
+
         @include Mobile {
-          display: block;
+          top: 1360px;
+          left: -108px;
+          width: 204px;
+          height: 204px;
+          z-index: -50;
         }
       }
       .price-banner {
