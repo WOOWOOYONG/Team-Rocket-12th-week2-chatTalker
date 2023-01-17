@@ -151,14 +151,13 @@ body .home-container {
   position: relative;
   margin: 0 auto;
   max-width: 1366px;
-  overflow: hidden;
 }
 body .home-container .home-bg {
   background: url("../chatTalker_images/bg_home.svg") no-repeat;
   position: absolute;
   top: 0;
   right: 0;
-  width: 62%;
+  width: 60%;
   height: 768px;
   z-index: -5;
 }
@@ -192,7 +191,7 @@ body .home-container .bg-ball-1 {
 }
 @media (max-width: 390px) {
   body .home-container .bg-ball-1 {
-    top: 740px;
+    top: 760px;
     left: -80px;
     width: 126px;
     height: 126px;
@@ -201,21 +200,20 @@ body .home-container .bg-ball-1 {
   }
 }
 body .home-container .bg-ball-2 {
-  background: url("../chatTalker_images/ball02.svg");
+  background: url("../chatTalker_images/ball02.svg") no-repeat;
   background-size: cover;
-  overflow: hidden;
-  width: 310px;
+  width: 220px;
   height: 310px;
-  position: absolute;
   z-index: -10;
-  top: 1880px;
-  left: 1156px;
+  position: absolute;
+  right: 0;
+  bottom: 1720px;
 }
 @media (max-width: 390px) {
   body .home-container .bg-ball-2 {
-    top: 3290px;
-    left: 305px;
-    width: 135px;
+    top: 3320px;
+    right: 0;
+    max-width: 88px;
     height: 135px;
   }
 }
@@ -225,13 +223,13 @@ body .home-container .bg-ball-3 {
   width: 150px;
   height: 150px;
   position: absolute;
-  top: 2630px;
+  top: 2700px;
   left: 50px;
   z-index: -10;
 }
 @media (max-width: 390px) {
   body .home-container .bg-ball-3 {
-    top: 5060px;
+    top: 5080px;
     left: -76px;
     width: 153px;
     height: 153px;
@@ -264,29 +262,30 @@ body .home-container .goTop:hover {
     font-size: 14px;
   }
 }
-body .home-container nav {
-  max-width: 1346px;
-  position: fixed;
+body .home-container header {
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   z-index: 100;
-  padding: 30px 80px;
-  width: 80%;
+}
+body .home-container header nav {
+  padding: 30px 84.5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.2s ease;
 }
-body .home-container nav .logo {
+body .home-container header nav .logo {
   width: 218px;
   height: 40px;
 }
-body .home-container nav .logo img {
+body .home-container header nav .logo img {
   width: 100%;
   height: 100%;
 }
 @media (max-width: 390px) {
-  body .home-container nav {
-    width: 390px;
+  body .home-container header nav {
+    max-width: 390px;
     height: 72px;
     padding: 2px 8px;
     justify-content: space-around;
@@ -295,12 +294,12 @@ body .home-container nav .logo img {
   }
 }
 @media (max-width: 390px) {
-  body .home-container nav .logo {
+  body .home-container header nav .logo {
     width: 130px;
     height: 24px;
   }
 }
-body .home-container nav a button {
+body .home-container header nav a button {
   font-size: 16px;
   font-weight: 300;
   padding: 8px 32px;
@@ -311,17 +310,17 @@ body .home-container nav a button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-body .home-container nav a button:hover {
+body .home-container header nav a button:hover {
   background-color: #c71508;
   transform: scale(1.1);
 }
 @media (max-width: 390px) {
-  body .home-container nav a button {
+  body .home-container header nav a button {
     width: 128px;
     height: 40px;
   }
 }
-body .home-container .fixed {
+body .home-container header .fixed {
   background: #fff;
   border-bottom: #ffd153 2px solid;
 }
@@ -330,20 +329,17 @@ body .home-container .home-banner {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 100px 120px 120px 141px;
+  margin: 30px 120px 100px 141px;
 }
 @media (max-width: 992px) {
   body .home-container .home-banner {
-    width: 100%;
+    max-width: 100%;
   }
 }
 @media (max-width: 390px) {
   body .home-container .home-banner {
-    margin: 100px auto 80px auto;
+    margin: 50px auto 80px auto;
   }
-}
-body .home-container .home-banner .banner-txt {
-  padding-top: 150px;
 }
 @media (max-width: 992px) {
   body .home-container .home-banner .banner-txt {
@@ -354,7 +350,7 @@ body .home-container .home-banner .banner-txt {
 @media (max-width: 390px) {
   body .home-container .home-banner .banner-txt {
     padding: 0 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 body .home-container .home-banner .banner-txt h3 {
@@ -389,7 +385,6 @@ body .home-container .home-banner .banner-txt p {
 }
 body .home-container .home-banner .banner-image {
   width: 532px;
-  height: auto;
 }
 @media (max-width: 1280px) {
   body .home-container .home-banner .banner-image {
@@ -565,6 +560,7 @@ body .home-container .features .features-container .feature-card {
   border-radius: 12px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
   padding-left: 32px;
+  background-color: #fff;
 }
 @media (max-width: 1280px) {
   body .home-container .features .features-container .feature-card {
@@ -642,12 +638,12 @@ body .home-container .users {
   max-width: 80%;
   margin: 100px auto;
   overflow: hidden;
+  height: 100%;
 }
 @media (max-width: 390px) {
   body .home-container .users {
     margin-top: 60px;
     max-width: 90%;
-    overflow: visible;
   }
 }
 body .home-container .users h2 {
@@ -753,7 +749,7 @@ body .home-container footer .footer-bg-sm {
     z-index: -5;
   }
   body .home-container footer .footer-bg-sm img {
-    width: 390px;
+    max-width: 390px;
     margin: 0 auto;
   }
 }
@@ -815,30 +811,14 @@ body .pricing-container {
   margin: 0 auto;
   position: relative;
 }
-body .pricing-container header .price-bg {
-  background: #f7f9fd 0% 0% no-repeat padding-box;
-  border-radius: 0px 0px 0px 300px;
-  width: 100%;
-  height: 470px;
-  position: absolute;
-  z-index: -20;
-}
-@media (max-width: 390px) {
-  body .pricing-container header .price-bg {
-    top: 70px;
-    right: 0px;
-    width: 420px;
-    height: 500px;
-    border-radius: 0px 0px 0px 200px;
-  }
-}
-body .pricing-container header nav {
-  max-width: 1346px;
-  position: fixed;
+body .pricing-container header {
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   z-index: 100;
-  padding: 30px 80px;
-  width: 80%;
+}
+body .pricing-container header nav {
+  padding: 30px 84.5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -854,7 +834,7 @@ body .pricing-container header nav .logo img {
 }
 @media (max-width: 390px) {
   body .pricing-container header nav {
-    width: 390px;
+    max-width: 390px;
     height: 72px;
     padding: 2px 8px;
     justify-content: space-around;
@@ -878,7 +858,6 @@ body .pricing-container header nav button {
   border-radius: 22px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 18px;
 }
 body .pricing-container header nav button:hover {
   background-color: #c71508;
@@ -894,63 +873,6 @@ body .pricing-container header nav button:hover {
 body .pricing-container header .fixed {
   background: #fff;
   border-bottom: #ffd153 2px solid;
-}
-body .pricing-container header .price-banner {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 100px;
-}
-body .pricing-container header .price-banner .banner-txt {
-  width: 30%;
-  height: 70px;
-  margin-top: 50px;
-  margin-left: 139px;
-  text-align: left;
-}
-@media (max-width: 390px) {
-  body .pricing-container header .price-banner .banner-txt {
-    width: 100%;
-    margin: 20px;
-  }
-}
-body .pricing-container header .price-banner .banner-txt h2 {
-  font-size: 48px;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-@media (max-width: 390px) {
-  body .pricing-container header .price-banner .banner-txt h2 {
-    margin-bottom: 16px;
-    font-size: 32px;
-  }
-}
-body .pricing-container header .price-banner .banner-txt p {
-  font-size: 16px;
-}
-body .pricing-container header .price-banner .banner-bg {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -5;
-}
-@media (max-width: 390px) {
-  body .pricing-container header .price-banner .banner-bg {
-    display: none;
-  }
-}
-body .pricing-container header .price-banner .banner-bg-sm {
-  display: none;
-}
-@media (max-width: 390px) {
-  body .pricing-container header .price-banner .banner-bg-sm {
-    display: block;
-    position: absolute;
-    top: 72px;
-    left: 0px;
-    width: 375px;
-    height: 495px;
-    z-index: -5;
-  }
 }
 body .pricing-container .goTop {
   background-color: #56c4c5;
@@ -982,6 +904,101 @@ body .pricing-container .goTop:hover {
 body .pricing-container main {
   margin-top: 400px;
 }
+body .pricing-container main .price-bg {
+  background: #f7f9fd 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 0px 300px;
+  width: 100%;
+  height: 470px;
+  position: absolute;
+  top: 0;
+  z-index: -20;
+}
+@media (max-width: 390px) {
+  body .pricing-container main .price-bg {
+    top: 0;
+    max-width: 420px;
+    height: 560px;
+    border-radius: 0px 0px 0px 200px;
+  }
+}
+body .pricing-container main .ball-yellow {
+  background: url("../chatTalker_images/ball03.svg");
+  background-size: cover;
+  position: absolute;
+  top: 1360px;
+  left: -108px;
+  width: 204px;
+  height: 204px;
+  z-index: -50;
+  display: none;
+}
+@media (max-width: 390px) {
+  body .pricing-container main .ball-yellow {
+    display: block;
+  }
+}
+body .pricing-container main .price-banner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+body .pricing-container main .price-banner .banner-txt {
+  width: 30%;
+  height: 70px;
+  margin-top: 50px;
+  margin-left: 139px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  body .pricing-container main .price-banner .banner-txt {
+    width: 100%;
+  }
+}
+@media (max-width: 390px) {
+  body .pricing-container main .price-banner .banner-txt {
+    width: 100%;
+    margin: 20px;
+  }
+}
+body .pricing-container main .price-banner .banner-txt h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+@media (max-width: 390px) {
+  body .pricing-container main .price-banner .banner-txt h2 {
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+}
+body .pricing-container main .price-banner .banner-txt p {
+  font-size: 16px;
+}
+body .pricing-container main .price-banner .banner-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -5;
+}
+@media (max-width: 390px) {
+  body .pricing-container main .price-banner .banner-bg {
+    display: none;
+  }
+}
+body .pricing-container main .price-banner .banner-bg-sm {
+  display: none;
+}
+@media (max-width: 390px) {
+  body .pricing-container main .price-banner .banner-bg-sm {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 375px;
+    height: 495px;
+    z-index: -5;
+  }
+}
 body .pricing-container main .price-plan {
   max-width: 70%;
   margin: 0 auto;
@@ -994,6 +1011,7 @@ body .pricing-container main .price-plan {
 @media (max-width: 390px) {
   body .pricing-container main .price-plan {
     max-width: 100%;
+    padding-top: 150px;
   }
 }
 body .pricing-container main .price-plan h3 {
@@ -1083,6 +1101,12 @@ body .pricing-container main .price-plan .plan-container .plan-card {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
   border-radius: 12px;
   position: relative;
+  background-color: #fff;
+}
+@media (max-width: 768px) {
+  body .pricing-container main .price-plan .plan-container .plan-card {
+    width: 90%;
+  }
 }
 @media (max-width: 390px) {
   body .pricing-container main .price-plan .plan-container .plan-card {

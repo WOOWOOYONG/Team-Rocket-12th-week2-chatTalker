@@ -10,32 +10,14 @@ body {
     margin: 0 auto;
     position: relative;
     header {
-      //banner背景
-      .price-bg {
-        background: #f7f9fd 0% 0% no-repeat padding-box;
-        border-radius: 0px 0px 0px 300px;
-        width: 100%;
-        height: 470px;
-        position: absolute;
-        z-index: -20;
-        @include Mobile {
-          top: 70px;
-          right: 0px;
-          width: 420px;
-          height: 500px;
-          border-radius: 0px 0px 0px 200px;
-        }
-      }
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      //導覽列
       nav {
-        max-width: 1346px;
         @include navbar;
         @include Mobile {
-          width: 390px;
-          height: 72px;
-          padding: 2px 8px;
-          justify-content: space-around;
-          background: #fff;
-          border-bottom: #ffd153 2px solid;
+          @include navbar-mobile;
         }
         .logo {
           @include Mobile {
@@ -45,7 +27,7 @@ body {
         }
         button {
           @include navbar-price-btn;
-          font-size: $font-s;
+          // font-size: $font-s;
           @include Mobile {
             width: 128px;
             height: 40px;
@@ -57,6 +39,49 @@ body {
         background: #fff;
         border-bottom: #ffd153 2px solid;
       }
+    }
+    //回到最上面按鈕
+    .goTop {
+      @include goTop-btn;
+      @include Mobile {
+        width: 50px;
+        height: 50px;
+        right: 16px;
+        font-size: 14px;
+      }
+    }
+    main {
+      //banner灰色背景
+      .price-bg {
+        background: #f7f9fd 0% 0% no-repeat padding-box;
+        border-radius: 0px 0px 0px 300px;
+        width: 100%;
+        height: 470px;
+        position: absolute;
+        top: 0;
+        z-index: -20;
+        @include Mobile {
+          top: 0;
+          max-width: 420px;
+          height: 560px;
+          border-radius: 0px 0px 0px 200px;
+        }
+      }
+      //背景黃色球
+      .ball-yellow {
+        background: url("../chatTalker_images/ball03.svg");
+        background-size: cover;
+        position: absolute;
+        top: 1360px;
+        left: -108px;
+        width: 204px;
+        height: 204px;
+        z-index: -50;
+        display: none;
+        @include Mobile {
+          display: block;
+        }
+      }
       .price-banner {
         display: flex;
         justify-content: space-between;
@@ -67,6 +92,9 @@ body {
           margin-top: 50px;
           margin-left: 139px;
           text-align: left;
+          @include Pad {
+            width: 100%;
+          }
           @include Mobile {
             width: 100%;
             margin: 20px;
@@ -98,7 +126,7 @@ body {
           @include Mobile {
             display: block;
             position: absolute;
-            top: 72px;
+            top: 70px;
             left: 0px;
             width: 375px;
             height: 495px;
@@ -106,18 +134,6 @@ body {
           }
         }
       }
-    }
-    //回到最上面按鈕
-    .goTop {
-      @include goTop-btn;
-      @include Mobile {
-        width: 50px;
-        height: 50px;
-        right: 16px;
-        font-size: 14px;
-      }
-    }
-    main {
       margin-top: 400px;
       //方案選擇
       .price-plan {
@@ -128,6 +144,7 @@ body {
         }
         @include Mobile {
           max-width: 100%;
+          padding-top: 150px;
         }
         h3 {
           text-align: center;
@@ -183,6 +200,10 @@ body {
             box-shadow: 0px 2px 10px #00000014;
             border-radius: 12px;
             position: relative;
+            background-color: #fff;
+            @include Pad {
+              width: 90%;
+            }
             @include Mobile {
               width: 100%;
               h3 {

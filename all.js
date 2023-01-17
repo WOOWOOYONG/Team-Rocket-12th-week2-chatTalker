@@ -50,7 +50,7 @@ questions.forEach((item) => {
 //fixed navbar
 const nav = document.querySelector("nav");
 window.addEventListener("scroll", () => {
-  if (this.scrollY <= 20) {
+  if (this.scrollY <= 30) {
     nav.classList.remove("fixed");
   } else {
     nav.classList.add("fixed");

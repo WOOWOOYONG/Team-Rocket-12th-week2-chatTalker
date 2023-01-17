@@ -9,3 +9,6 @@
 5. Scss 檔案分類整理
 6. pseudo-element image 可以用 transform 改變大小
 7. navbar 使用 position: fixed 為何會超出頁面寬度
+8. position: sticky 與 fixed 差別
+9. goToTop 按鈕有時候只回到頁面的一半
+10. 在較小的螢幕不要有 x 軸 : width 需改成 max-width
