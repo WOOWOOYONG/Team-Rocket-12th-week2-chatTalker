@@ -403,7 +403,8 @@ body .home-container .home-banner .banner-image img {
 }
 body .home-container .platform {
   text-align: center;
-  width: 80%;
+  max-width: 1120px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 body .home-container .platform h3 {
@@ -926,9 +927,10 @@ body .pricing-container main .ball-yellow {
   background-size: cover;
   position: absolute;
   top: 820px;
-  left: -340px;
-  width: 361px;
+  left: 0;
+  width: 94px;
   height: 361px;
+  transform: scaleX(-1);
 }
 @media (max-width: 390px) {
   body .pricing-container main .ball-yellow {

@@ -73,9 +73,10 @@ body {
         background-size: cover;
         position: absolute;
         top: 820px;
-        left: -340px;
-        width: 361px;
+        left: 0;
+        width: 94px;
         height: 361px;
+        transform: scaleX(-1);
 
         @include Mobile {
           top: 1360px;
